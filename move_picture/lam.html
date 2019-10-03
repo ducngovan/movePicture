@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move</title>
+</head>
+<body>
+<img src="../image.jpg" height="120" width="120" style="position: absolute; top:0;left: 0;" id="picture"/>
+<script>
+    var picture = document.getElementById('picture').style;
+    window.addEventListener("keydown", onkeydown);
+    function onkeydown(evt) {
+        const num =4;
+        switch (evt.which) {
+            case 37:
+            {
+                 picture.left = parseInt(picture.left) + -num + 'px';
+                 break;
+            }
+            case 38:{
+                    picture.top = parseInt(picture.top)+ -num +'px';
+                    break;
+            }
+            case 39:{
+                picture.left = parseInt(picture.left) + num + 'px';
+                break;
+            }
+            case 40:{
+                picture.top = parseInt(picture.top)+ num +'px';
+                break;
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>
